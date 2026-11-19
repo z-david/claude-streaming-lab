@@ -1,0 +1,25 @@
+{
+  "name": "claude-streaming-lab",
+  "version": "1.0.0",
+  "description": "Hands-on exploration of the Claude Messages API streaming events (message_start, content_block_start, ...) in TypeScript",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "events": "tsx --env-file-if-exists=.env src/01-event-log.ts",
+    "message-start": "tsx --env-file-if-exists=.env src/02-message-start.ts",
+    "blocks": "tsx --env-file-if-exists=.env src/03-content-blocks.ts",
+    "timing": "tsx --env-file-if-exists=.env src/04-timing.ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^1.10.0"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.6",
+    "tsx": "^4.23.15",
+    "typescript": "^7.0.2"
+  }
+}
